@@ -5,9 +5,6 @@ import CustomerList from "../components/CustomerList";
 
 
 const CustomerListPage = () => {
-
-
-
     return (
         <>
             <Menu/>

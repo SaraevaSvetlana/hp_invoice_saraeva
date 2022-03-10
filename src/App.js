@@ -8,7 +8,6 @@ import './App.css';
 import CustomerListPage from "./pages/CustomerListPage";
 import PackageListPage from "./pages/PackageListPage";
 import InvoicePage from "./pages/InvoicePage";
-import {UseFetchData} from "./hooks/useFetchData";
 import ListInvoicePage from "./pages/ListInvoicePage";
 
 export const UserContext = createContext();
@@ -17,9 +16,7 @@ export const PackageContext = createContext();
 export const CounterInvoiceContext = createContext();
 
 function App() {
-
-    // const [customers,packages] = UseFetchData("../data.json");
-    const [user, setUser] = useState({id: 0, name: 'Sveta'});
+    const [user, setUser] = useState({id: 0, name: ''});
     const [customers, setCustomers] = useState([]);
     const [packages, setPackages] = useState([]);
     const [counterInvoice, setCounterInvoice] = useState(0);

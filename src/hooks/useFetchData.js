@@ -2,24 +2,30 @@ import React, {useEffect, useState} from 'react';
 
 
  function useFetchData  (url) {
-    const [customers, setCustomers] = useState( []);
-    const [packages, setPackages] = useState([]);
+     const [user, setUser] = useState({id: 0, name: ''});
+     const [customers, setCustomers] = useState([]);
+     const [packages, setPackages] = useState([]);
+     const [counterInvoice, setCounterInvoice] = useState(0);
 
+     useEffect(() => {
+         fetch(url).then(response => response.json())
+             .then(data => {
+                 setCustomers(data.customers);
+                 data.packages.sort((a,b) => a.shippingOrder-b.shippingOrder);
+                 setPackages(data.packages);
+             });
 
-    useEffect(()=>{
-        fetch(url).then(response => response.json())
-            .then(data => {
+     }, [])
 
-                setCustomers(data.customers);
-                setPackages(data.packages)
-                console.log(data.customers);
-                console.log(data.packages);
-            });
-
-    },[])
-    return{
+     return{
+         user,
+         setUser,
         customers,
+         setCustomers,
         packages,
+         setPackages,
+         counterInvoice,
+         setCounterInvoice
     };
 };
 export { useFetchData };

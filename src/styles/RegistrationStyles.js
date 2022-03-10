@@ -10,7 +10,7 @@ export const StyledPaper = styled(Paper, {
     display: "flex",
     flexDirection: "column",
     padding: "30px 20px",
-    width: 600,
+    width: 400,
     margin: "20px 10px"
 });
 

@@ -19,6 +19,8 @@ const CustomerList = () => {
         setUser(userName);
         setCounterInvoice(counterInvoice + 1);
     };
+
+    const cellId = <TableCell>Name</TableCell>;
     return (
         <>
             <TableContainer component={Paper}>
@@ -26,7 +28,8 @@ const CustomerList = () => {
                     <TableHead>
                         <TableRow>
                             <TableCell>id</TableCell>
-                            <TableCell>Name</TableCell>
+                            {/*<TableCell>Name</TableCell>*/}
+                            {cellId}
                             <TableCell></TableCell>
                             <TableCell></TableCell>
                         </TableRow>

@@ -45,22 +45,23 @@ const Package = ({handleClose}) => {
                     </StyledGrid>
                     <form onSubmit={handleSubmit}>
                         <StyledGrid>
-                            <label htmlFor="text">Customerid</label>
+                            <label htmlFor="text">Customerid  </label>
                             <input
+                                sx={{marginLeft: '10px'}}
                                 ref={customeridRef}
                                 type='text'
                             />
                         </StyledGrid>
 
                         <StyledGrid>
-                            <label htmlFor="text">Weight</label>
+                            <label htmlFor="text">Weight  </label>
                             <input
                                 ref={weightRef}
                                 type='text'
                             />
                         </StyledGrid>
                         <StyledGrid>
-                            <label htmlFor="text">Price</label>
+                            <label htmlFor="text">Price  </label>
                             <input
                                 ref={priceRef}
                                 type='text'
